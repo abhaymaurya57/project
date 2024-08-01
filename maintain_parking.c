@@ -1,12 +1,37 @@
 #include<stdio.h>
 #include<conio.h>
+int menu();
+void bus();
+void cycle();
+void riksha();
+void delete();
+void showdetail();
 int nor=0,nob=0,noc=0,amount=0,count=0;
-void main()
+int main()
 {
-clrscr();
-getch();
+switch(menu())
+{
+case 1:
+bus();
+break;
+case 2:
+cycle();
+break;
+case 3:
+riksha();
+break;
+case 4:
+showdetail();
+break;
+case 5:
+delete();
+default:
+printf("\ninvalid choice:");
 }
-void menu(){
+getch();
+} 
+int menu(){
+    int ch;
     printf("\n1. enter bus:");
     printf("\n2. enter cycle:");
     printf("\n3. enter riksha:");
